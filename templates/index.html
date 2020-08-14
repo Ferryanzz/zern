@@ -45,6 +45,14 @@
 
         {%- block math -%}
         {%- endblock math -%}
+        <!-- Google Analytics -->
+        {% if config.extra.google_analytics.enabled %}<script async src="https://www.googletagmanager.com/gtag/js?id={{ config.extra.google_analytics.id }}"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '{{ config.extra.google_analytics.id }}');
+        </script>{% endif %}
     </head>
     <body>
         {#
