@@ -104,5 +104,8 @@
         {% if config.extra.goatcounter_code -%}
         <script data-goatcounter="https://{{config.extra.goatcounter_code}}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
         {%- endif -%}
+        {% if config.extra.mastodon_url -%}
+        <a rel="me" href="{{config.extra.mastodon_url}}" />
+        {%- endif -%}
     </body>
 </html>
