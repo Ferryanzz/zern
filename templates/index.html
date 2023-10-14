@@ -107,5 +107,10 @@
         {% if config.extra.mastodon_url -%}
         <a rel="me" href="{{config.extra.mastodon_url}}" />
         {%- endif -%}
+
+        {% if config.extra.simlay_analytics -%}
+            <script type="text/javascript" src="https://simlay-web-tools.fly.dev/static/tracker-client.js"></script>
+            <script type="text/javascript">new Tracker("{{ config.extra.simlay_analytics }}"); </script>
+        {%- endif -%}
     </body>
 </html>
